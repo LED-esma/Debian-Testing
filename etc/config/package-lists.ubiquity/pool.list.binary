@@ -3,7 +3,6 @@ setserial
 user-setup
 
 efibootmgr
-secureboot-db
 
 grub-efi-amd64
 grub-efi-amd64-bin
