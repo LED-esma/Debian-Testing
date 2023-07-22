@@ -1,8 +1,4 @@
-b43-fwcutter
-bcmwl-kernel-source
 dkms
-intel-microcode
-iucode-tool
 setserial
 user-setup
 
@@ -12,5 +8,3 @@ secureboot-db
 grub-efi-amd64
 grub-efi-amd64-bin
 grub-efi-amd64-signed
-shim
-shim-signed
