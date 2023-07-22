@@ -70,11 +70,21 @@ build () {
 # MOVE OUTPUT TO BUILDS DIR #
 #---------------------------#
 "
+  YYYYMMDD="$(date +%Y%m%d)"
+  OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
+  mkdir -p "$OUTPUT_DIR"
+  FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
+  mv $BASE_DIR/tmp/amd64/live-image-amd64.iso "$OUTPUT_DIR/${FNAME}.iso"
+
+  # cd into output to so {FNAME}.sha256.txt only
   # cd into output to so {FNAME}.sha256.txt only
   # includes the filename and not the path to
+  # includes the filename and not the path to
   # our file.
-  
-cd $BASE_DIR
+  # our file.
+  cd $OUTPUT_DIR
+  md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
+  sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
 
 }
 
