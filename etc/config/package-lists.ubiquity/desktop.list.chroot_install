@@ -1,4 +1,3 @@
-@XORG_HWE
 cargo
 rustc
 kde-plasma-desktop
