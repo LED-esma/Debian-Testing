@@ -72,7 +72,7 @@ build () {
 #---------------------------#
 "
   YYYYMMDD="$(date +%Y%m%d)"
-  OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
+  OUTPUT_DIR="iso-builder-devel/builds/amd64"
   mkdir -p $OUTPUT_DIR
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
   mv $BASE_DIR/tmp/amd64/${FNAME}.iso "$OUTPUT_DIR/"
