@@ -25,7 +25,6 @@ echo -e "
 apt-get update
 apt-get install -y live-build gnupg2 binutils zstd ca-certificates
 
-
 echo -e "
 #----------------------#
 # PREPARE BUILD OUTPUT #
@@ -72,21 +71,22 @@ build () {
 #---------------------------#
 "
   YYYYMMDD="$(date +%Y%m%d)"
-  mkdir -p iso-builder-devel/builds/amd64
+  OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
+  mkdir -p "$OUTPUT_DIR"
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
-  mv $BASE_DIR/tmp/amd64/${FNAME}.iso "iso-devel-builder/builds/amd64/"
-  
+  mv $BASE_DIR/tmp/amd64/live-image-amd64.iso "$OUTPUT_DIR/${FNAME}.iso"
+
   # cd into output to so {FNAME}.sha256.txt only
   # includes the filename and not the path to
   # our file.
-  cd iso-builder-dev/builds/amd64
+  cd $OUTPUT_DIR
   md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
   sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
   cd $BASE_DIR
 }
 
 if [[ "$ARCH" == "all" ]]; then
-    build amd644
+    build amd64
 else
     build "$ARCH"
 fi
