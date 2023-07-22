@@ -72,10 +72,9 @@ build () {
 #---------------------------#
 "
   YYYYMMDD="$(date +%Y%m%d)"
-  OUTPUT_DIR="iso-builder-devel/builds/amd64"
-  mkdir -p "$OUTPUT_DIR"
+  mkdir -p iso-builder-devel/builds/amd64
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
-  mv $BASE_DIR/tmp/amd64/${FNAME}.iso "$OUTPUT_DIR/"
+  mv $BASE_DIR/tmp/amd64/${FNAME}.iso iso-devel-builder/builds/amd64/
   
   # cd into output to so {FNAME}.sha256.txt only
   # includes the filename and not the path to
@@ -87,7 +86,7 @@ build () {
 }
 
 if [[ "$ARCH" == "all" ]]; then
-    build amd64
+    build amd644
 else
     build "$ARCH"
 fi
