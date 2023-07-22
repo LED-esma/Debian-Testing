@@ -79,7 +79,7 @@ build () {
   # cd into output to so {FNAME}.sha256.txt only
   # includes the filename and not the path to
   # our file.
-  cd $OUTPUT_DIR
+  cd iso-builder-dev/builds/amd64
   md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
   sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
   cd $BASE_DIR
