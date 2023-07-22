@@ -74,10 +74,8 @@ build () {
   # includes the filename and not the path to
   # our file.
   
-  cd /iso-devel-builder/tmp/amd64/live-image-amd64.iso
-  md5sum "live-image-amd64.iso" > "live-image-amd64.md5.txt"
-  sha256sum "live-image-amd64.iso" > "live-image-amd64.sha256.txt"
-  cd $BASE_DIR
+cd $BASE_DIR
+
 }
 
 if [[ "$ARCH" == "all" ]]; then
