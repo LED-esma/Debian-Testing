@@ -74,7 +74,7 @@ build () {
   YYYYMMDD="$(date +%Y%m%d)"
   mkdir -p iso-builder-devel/builds/amd64
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
-  mv $BASE_DIR/tmp/amd64/${FNAME}.iso iso-devel-builder/builds/amd64/
+  mv $BASE_DIR/tmp/amd64/${FNAME}.iso "iso-devel-builder/builds/amd64/"
   
   # cd into output to so {FNAME}.sha256.txt only
   # includes the filename and not the path to
