@@ -74,7 +74,7 @@ build () {
   OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
   mkdir -p $OUTPUT_DIR
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX.hybrid"
-  mv "$BASE_DIR/tmp/amd64/*" "$OUTPUT_DIR/"
+  mv $BASE_DIR/tmp/amd64/* "$OUTPUT_DIR/"
 
   # cd into output to so {FNAME}.sha256.txt only
   # cd into output to so {FNAME}.sha256.txt only
