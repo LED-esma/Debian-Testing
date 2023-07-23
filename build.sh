@@ -82,6 +82,7 @@ build () {
   # includes the filename and not the path to
   # our file.
   # our file.
+  cd "$BASE_DIR"
 
 }
 
