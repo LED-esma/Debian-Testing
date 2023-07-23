@@ -82,9 +82,6 @@ build () {
   # includes the filename and not the path to
   # our file.
   # our file.
-  cd $OUTPUT_DIR
-  md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
-  sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
 
 }
 
