@@ -74,7 +74,7 @@ build () {
   OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
   mkdir -p "$OUTPUT_DIR"
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
-  mv $BASE_DIR/tmp/amd64/live-image-amd64.hybrid.iso "$OUTPUT_DIR/{$FNAME}.hybrid.iso"
+  mv $BASE_DIR/tmp/amd64/live-image-amd64.hybrid.iso "$OUTPUT_DIR/$FNAME.hybrid.iso"
 
   # cd into output to so {FNAME}.sha256.txt only
   # cd into output to so {FNAME}.sha256.txt only
@@ -83,7 +83,6 @@ build () {
   # our file.
   # our file.
   cd "$OUTPUT_DIR"
-  ls -l 
   md5sum "${FNAME}.hybrid.iso" > "${FNAME}.md5.txt" 
   sha256sum "${FNAME}.hybrid.iso" > "${FNAME}.sha256.txt"
 
