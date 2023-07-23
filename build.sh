@@ -83,6 +83,7 @@ build () {
   # our file.
   # our file.
   cd "$OUTPUT_DIR"
+  ls -l 
   md5sum "${FNAME}.hybrid.iso" > "${FNAME}.md5.txt" 
   sha256sum "${FNAME}.hybrid.iso" > "${FNAME}.sha256.txt"
 
