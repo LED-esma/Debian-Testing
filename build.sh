@@ -74,6 +74,7 @@ build () {
   OUTPUT_DIR="$BASE_DIR/builds/$BUILD_ARCH"
   mkdir -p "$OUTPUT_DIR"
   FNAME="pOs-$VERSION-$CHANNEL.$YYYYMMDD$OUTPUT_SUFFIX"
+  ls -l $BASE_DIR/tmp/amd64/
   mv $BASE_DIR/tmp/amd64/pSo.iso "$OUTPUT_DIR/${FNAME}.iso"
 
   # cd into output to so {FNAME}.sha256.txt only
