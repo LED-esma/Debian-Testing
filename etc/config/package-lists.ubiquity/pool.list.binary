@@ -3,7 +3,7 @@ setserial
 user-setup
 
 efibootmgr
-
+fwsetup
 grub-efi-amd64
 grub-efi-amd64-bin
 grub-efi-amd64-signed
