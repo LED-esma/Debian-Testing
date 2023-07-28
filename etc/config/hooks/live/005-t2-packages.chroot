@@ -1,5 +1,8 @@
 #!/bin/sh
-apt install -y curl 
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -y -qq -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
+curl \
+
 mkdir -p /etc/apt/sources.list.d
 
 curl -s --compressed "https://adityagarg8.github.io/t2-ubuntu-repo/KEY.gpg" | gpg --dearmor | tee /etc/apt/trusted.gpg.d/t2-ubuntu-repo.gpg >/dev/null
