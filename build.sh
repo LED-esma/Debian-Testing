@@ -23,7 +23,7 @@ echo -e "
 #----------------------#
 "
 apt-get update
-apt-get install -y live-build gnupg2 binutils zstd ca-certificates curl
+apt-get install -y live-build gnupg2 binutils zstd ca-certificates curl systemd-sysv
 
 echo -e "
 #----------------------#
