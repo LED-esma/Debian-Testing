@@ -20,7 +20,7 @@ lb config noauto \
     --parent-archive-areas "main" \
     --linux-packages "linux-image linux-headers" \
     --linux-flavours "$KERNEL_FLAVORS" \
-    --bootappend-live "boot=casper config username=Guest user-fullname=live" \
+    --bootappend-live "boot=live config username=Guest user-fullname=live" \
     --mirror-bootstrap "$MIRROR_URL" \
     --parent-mirror-bootstrap "$MIRROR_URL" \
     --mirror-chroot-security "http://deb.debian.org/debian-security/" \
