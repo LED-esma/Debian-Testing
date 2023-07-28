@@ -18,7 +18,7 @@ lb config noauto \
     --parent-distribution "$BASECODENAME" \
     --archive-areas "main" \
     --parent-archive-areas "main" \
-    --linux-packages "linux-image linux headers" \
+    --linux-packages linux image \
     --linux-flavours "$KERNEL_FLAVORS" \
     --bootappend-live "boot=live config username=Guest user-fullname=live" \
     --mirror-bootstrap "$MIRROR_URL" \
