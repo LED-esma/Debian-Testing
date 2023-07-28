@@ -7,7 +7,7 @@ set -e
 if [ "$HWE_KERNEL" = "yes" ]; then
     KERNEL_FLAVORS="generic-hwe-${BASEVERSION}"
 else
-    KERNEL_FLAVORS="amd64"
+    KERNEL_FLAVORS="generic"
 fi
 
 lb config noauto \
